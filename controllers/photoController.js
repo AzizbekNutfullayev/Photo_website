@@ -44,7 +44,7 @@ exports.getPhotos = async (req, res) => {
       [userId]
     );
     const photos = result.rows.map(photo =>{
-      return {...photo,url:'http://localhost:4000/' + photo.filepath}
+      return {...photo,url:'https://photo-website-1-rgve.onrender.com/' + photo.filepath}
     })
     
     res.status(200).json(photos);
